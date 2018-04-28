@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Pope's interrogation</title>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+        crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+        crossorigin="anonymous"></script>
+
+    <!-- other -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+        crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+"
+        crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Rhodium+Libre" rel="stylesheet">
+    <!-- link to css file -->
+    <link rel="stylesheet" href="./AssignmentKidsQuiz.css">
+</head>
+
+<body>
+    <div class="overall-background"></div>
+    <div class="pic-background">
+        <div id="question1" class="question show">
+            <div class="heading-container">
+                <h2 class="question-heading">The Pope is calling you. What do you do?</h2>
+            </div>
+            <div class="answer-container">
+                <a>
+                    <div class="bton col-sm-5" onclick="changeQuestion(1);">
+                        <div class="vertical-align">Answer call</div>
+                    </div>
+                </a>
+                <a>
+                    <div class="bton col-sm-5" onclick="quitQuiz();">
+                        <div class="vertical-align">Cry and decline</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div id="question2" class="question">
+            <div class="heading-container">
+                <h2 class="question-heading">Good news. The pope has heard that you prayed to know how many children you will have one day. He promises
+                    to tell you, if you truthfully answer 5 questions for him.</h2>
+            </div>
+            <div class="answer-container">
+                <a>
+                    <div class="bton col-sm-5" onclick="changeQuestion(1);">
+                        <div class="vertical-align">Begin interrogation</div>
+                    </div>
+                </a>
+                <a>
+                    <div class="bton col-sm-5" onclick="quitQuiz();">
+                        <div class="vertical-align">Hang up and regret</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div id="question3" class="question">
+            <div class="heading-container">
+                <h2 class="question-heading">At what age did you have your first Girlfriend/ Boyfriend?</h2>
+            </div>
+            <div class="row answer-container">
+                <a>
+                    <div class="bton col-sm-5" onclick="changeQuestion(1); pointCounter(0);">
+                        <div class="vertical-align">What's a Girlfriend/ Boyfriend?</div>
+                    </div>
+                </a>
+                <a>
+                    <div class="bton col-sm-5" onclick="changeQuestion(1); pointCounter(1);">
+                        <div class="vertical-align">Do same sex relationships count?</div>
+                    </div>
+                </a>
+                <a>
+                    <div class="bton col-sm-5" onclick="changeQuestion(1); pointCounter(3);">
+                        <div class="vertical-align">At some point in elementary school</div>
+                    </div>
+                </a>
+                <a>
+                    <div class="bton col-sm-5" onclick="changeQuestion(1); pointCounter(8);">
+                        <div class="vertical-align">I was so young, she/ he taught me how to walk</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div id="question4" class="question">
+            <div class="heading-container">
+                <h2 class="question-heading">How well does the term lonely wolf suit you?</h2>
+            </div>
+            <div class="row answer-container">
+                <div class="center-container">
+                    <div class="block">
+                        <input class="middle-item" type="radio" id="wolflevel1">
+                        <label>Funny, that's my nickname</label>
+                    </div>
+                    <div class="block">
+                        <input class="middle-item" type="radio" id="wolflevel2">
+                        <label>Occasionally I like to dress in grey and hide in the dark</label>
+                    </div>
+                    <div class="block">
+                        <input class="middle-item" type="radio" id="wolflevel3">
+                        <label>Not well, I'm always around people</label>
+                    </div>
+                    <div class="block">
+                        <input class="middle-item" type="radio" id="wolflevel4">
+                        <label>I like to pretend to be a lonely wolf because girls are into it</label>
+                    </div>
+                    <a>
+                        <div class="bton submit" onclick="changeQuestion(1); radioInterpreter();">
+                            Next
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="question5" class="question">
+            <div class="heading-container">
+                <h2 class="question-heading">What does a perfect Friday night look like? (Multiple answers possible)</h2>
+            </div>
+            <div class="row answer-container">
+                <div class="center-container">
+                    <div class="block">
+                        <input class="middle-item" type="checkbox" id="friday1">
+                        <label>I invite all my Tinder matches to the same bar and make it the night of my life</label>
+                    </div>
+                    <div class="block">
+                        <input class="middle-item" type="checkbox" id="friday2">
+                        <label>Watch a movie with mom and eat ice cream</label>
+                    </div>
+                    <div class="block">
+                        <input class="middle-item" type="checkbox" id="friday3">
+                        <label>Go downtown with the gang</label>
+                    </div>
+                    <div class="block">
+                        <input class="middle-item" type="checkbox" id="friday4">
+                        <label>Dinner with bae</label>
+                    </div>
+                    <a>
+                        <div class="bton submit" onclick="changeQuestion(1); checkboxInterpreter();">
+                            Next
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="question6" class="question">
+            <div class="heading-container">
+                <h2 class="question-heading">What does your perfect partner look like?</h2>
+            </div>
+            <div class="row answer-container">
+                <a>
+                    <div class="bton col-sm-5" onclick="changeQuestion(1); pointCounter(0);">
+                        <div class="vertical-align">I have a 10 page requirements list for the perfect one</div>
+                    </div>
+                </a>
+                <a>
+                    <div class="bton col-sm-5" onclick="changeQuestion(1); pointCounter(10);">
+                        <div class="vertical-align">Inner values are more important to me</div>
+                    </div>
+                </a>
+                <a>
+                    <div class="bton col-sm-5" onclick="changeQuestion(1); pointCounter(0);">
+                        <div class="vertical-align">Do you mean chess training partner?</div>
+                    </div>
+                </a>
+                <a>
+                    <div class="bton col-sm-5" onclick="changeQuestion(1); pointCounter(20);">
+                        <div class="vertical-align">Generally blonde, but I couldn't go without gingers every once in a while</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div id="question7" class="question">
+            <div class="heading-container">
+                <h2 class="question-heading">How evolved is your instinct to care about others?</h2>
+            </div>
+            <div class="row answer-container">
+                <div class="center-container">
+                    <label class="block">Type in a value from 0 (Pontius Pilatus) to 3 (Maria Magdalena)</label>
+                    <div class="error-message" id="errorMessage">Please enter a valid input. the Pope's time is valuable.</div>
+                    <input class="block middle-item" type="text" id="myText" value="0">
+                    <a>
+                        <div class="bton submit" onclick="changeQuestion(1); textInterpreter();">
+                            Next
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="question8" class="question">
+            <div class="heading-container">
+                <h2 class="question-heading">At what time did you go to bed last night?</h2>
+            </div>
+            <div class="row answer-container">
+                <label class="block">Enter the exact time you closed your eyes</label>
+                <div class="error-message" id="errorMessage1">Please enter a valid input. the Pope's time is valuable.</div>
+                <input class="block middle-item" type="time" id="myTime">
+                <a>
+                    <div class="bton submit" onclick="changeQuestion(1); timeInterpreter();">
+                        Next
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div id="question9" class="question">
+            <div class="heading-container">
+                <h2 class="question-heading">How many kids would you like to have?</h2>
+            </div>
+            <div class="row answer-container">
+                <div class="center-container">
+                    <label class="block">Answer on a scale from Jesus to Abraham</label>
+                    <input class="block middle-item" type="range" id="myRange" value="50">
+                    <a>
+                        <div class="bton submit" onclick="changeQuestion(1); rangeInterpreter(); emitResult();">
+                            Next
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="question10" class="question">
+            <div class="heading-container">
+                <h2 class="question-heading">According to the calculations of the catholic church, you will have
+                    <span id="result"></span> children.</h2>
+            </div>
+            <div class="answer-container">
+                <a>
+                    <div class="bton" onclick="changeQuestion(-8); resetPoints();">
+                        <div class="vertical-align">Pray again</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div id="question11" class="question">
+            <div class="heading-container">
+                <h2 class="question-heading">Goodbye.</h2>
+            </div>
+            <div class="answer-container">
+                <a>
+                    <div class="bton" onclick="changeQuestion(-9);resetPoints();">
+                        <div class="vertical-align">Pray again</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="lower-container"></div>
+</body>
+<!-- link to js file -->
+<script src="./AssignmentKidsQuiz.js"></script>
+
+</html>

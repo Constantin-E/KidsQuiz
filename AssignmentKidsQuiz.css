@@ -1,0 +1,129 @@
+.overall-background{
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    z-index: 0;
+    background-color: rgb(7, 26, 0);
+}
+.pic-background{
+    width: 100vw;
+    min-width: 900px;
+    height: calc(100vw/2);
+    min-height: 450px;
+    max-height: 95vh;
+    z-index: 1;
+    background-image: url("http://saltandlighttv.org/blog/wp-content/uploads/2013/01/pope-on-the-phone-001.jpg");
+    background-size: cover;
+    position: absolute;
+}
+.heading-container{
+    display: block;
+    width: 50vw;
+    padding-left: 30px;
+    padding-top: 50px;
+}
+.question-heading{
+    color: white;
+    line-height: 40px;
+    font-size: 22px;
+    background-color:rgba(65, 65, 65,0.7);
+    display: inline;
+    font-family: 'Rhodium Libre', serif;
+}
+.answer-container{
+    padding: 15px;
+    position: absolute;
+    display: inline-block;
+    bottom: 30px;
+    /* left: 30px; */
+    width: 100vw;
+    text-align: center;
+    background-color:rgba(65, 65, 65,0.7);
+}
+.middle-item{
+    padding: 15px;
+}
+.center-container{
+}
+label{
+    color: white;
+    line-height: 30px;
+    font-size: 16px;
+    display: inline-block;
+    font-family: 'Rhodium Libre', serif;
+}
+.bton{
+    background-color: rgb(110, 0, 0);
+    height: 80px;
+    border-radius: 5px;
+    color: blanchedalmond;
+    padding: 16px 16px;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition: 0.3s;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: top;
+}
+.bton.submit{
+    width:auto;
+    height: auto;
+}
+.block{
+    display: block;
+    margin: auto;
+}
+.row{
+    margin-right: 0;
+    margin-left: 0;
+}
+.vertical-align{
+    display: flex; 
+    flex-direction: row; 
+    align-items: center;
+    justify-content: center;
+    height: 48px;
+}
+.bton:hover {
+    background-color: #3e8e41;
+    color: white;
+}
+.question{
+    display: none;
+}
+.show{
+    display: block;
+}
+.error-message{
+    display: none;
+    color: rgb(110, 0, 0);
+    background-color: blanchedalmond;
+    margin: 5px 0 5px 0;
+}
+@media only screen  and (max-width : 900px) {
+    .pic-background{
+        width: auto;
+        min-width: auto;
+        min-height: auto;
+        height: 100vh;
+        width: 100vw;
+    }
+    .bton{
+        height: auto;
+        width: 80vw;
+    }
+    .heading-container {
+        width: 75vw;
+    }
+    .question-heading{
+        width: 75vw;
+    }
+    .answer-container{
+        position: absolute;
+        bottom: 15px;
+        left: 0;
+        width:100vw;
+        text-align: center;
+    }
+}
